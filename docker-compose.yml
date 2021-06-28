@@ -59,6 +59,7 @@ services:
       - 10000:10000
     volumes:
       - ./data:/data
+      - ./dfs-master:/dfs
     networks:
       spark_net:
         ipv4_address: 172.28.1.1
@@ -68,6 +69,7 @@ services:
       - "hivemetastore:172.28.1.4"
       - "zeppelin:172.28.1.5"
       - "livy:172.28.1.6"
+
 
   worker1:
     image: panovvv/hadoop-hive-spark:2.5.2
@@ -93,6 +95,7 @@ services:
       - 8081:8081
     volumes:
       - ./data:/data
+      - ./dfs-work1:/dfs
     networks:
       spark_net:
         ipv4_address: 172.28.1.2
@@ -128,6 +131,7 @@ services:
       - 8082:8082
     volumes:
       - ./data:/data
+      - ./dfs-work2:/dfs
     networks:
       spark_net:
         ipv4_address: 172.28.1.3
@@ -174,6 +178,50 @@ services:
       - "worker2:172.28.1.3"
       - "hivemetastore:172.28.1.4"
       - "zeppelin:172.28.1.5"
+
+  # postgres used by airflow
+  postgres:
+      image: postgres:9.6
+      networks:
+        spark_net:
+          ipv4_address: 172.28.1.21
+      volumes: 
+          # Create Test database on Postgresql
+          - ./docker-airflow/pg-init-scripts:/docker-entrypoint-initdb.d
+      environment:
+          - POSTGRES_USER=airflow
+          - POSTGRES_PASSWORD=airflow
+          - POSTGRES_DB=airflow
+      ports:
+          - "5432:5432"
+
+  # airflow LocalExecutor
+  airflow-webserver:
+      image: kylg/docker-airflow-spark:latest
+      restart: always
+      networks:
+        spark_net:
+          ipv4_address: 172.28.1.22
+      depends_on:
+          - postgres
+      environment:
+          - LOAD_EX=n
+          - EXECUTOR=Local
+          - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+          - HADOOP_USER_NAME=root
+          - FERNET_KEY=RxMvZmS7-z3mm9Ilf1SsUm4ObGbpi3R5Qlz2yG1Fg9s=
+      volumes:
+          - ./airflow/dags:/usr/local/airflow/dags #DAG folder
+          - ./airflow/logs:/usr/local/airflow/logs
+          - ./airflow/config/airflow.cfg:/usr/local/airflow/airflow/airflow.cfg
+      ports:
+          - "8282:8282"
+      command: webserver
+      healthcheck:
+          test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
+          interval: 30s
+          timeout: 30s
+          retries: 3
 
   zeppelin:
     image: panovvv/zeppelin-bigdata:2.5.2

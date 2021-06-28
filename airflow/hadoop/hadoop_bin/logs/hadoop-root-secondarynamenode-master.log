@@ -1,0 +1,742 @@
+2021-06-27 13:11:28,300 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = master/172.28.1.1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.2.0
+STARTUP_MSG:   classpath = /usr/hadoop/etc/hadoop:/usr/hadoop/share/hadoop/common/lib/token-provider-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/usr/hadoop/share/hadoop/common/lib/commons-io-2.5.jar:/usr/hadoop/share/hadoop/common/lib/jackson-annotations-2.9.5.jar:/usr/hadoop/share/hadoop/common/lib/commons-codec-1.11.jar:/usr/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/hadoop/share/hadoop/common/lib/netty-3.10.5.Final.jar:/usr/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/hadoop/share/hadoop/common/lib/jersey-core-1.19.jar:/usr/hadoop/share/hadoop/common/lib/avro-1.7.7.jar:/usr/hadoop/share/hadoop/common/lib/metrics-core-3.2.4.jar:/usr/hadoop/share/hadoop/common/lib/kerb-client-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/gson-2.2.4.jar:/usr/hadoop/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/usr/hadoop/share/hadoop/common/lib/guava-11.0.2.jar:/usr/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/kerby-config-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/commons-net-3.6.jar:/usr/hadoop/share/hadoop/common/lib/commons-lang3-3.7.jar:/usr/hadoop/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/hadoop-annotations-3.2.0.jar:/usr/hadoop/share/hadoop/common/lib/jackson-databind-2.9.5.jar:/usr/hadoop/share/hadoop/common/lib/kerb-util-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/curator-client-2.12.0.jar:/usr/hadoop/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/usr/hadoop/share/hadoop/common/lib/jersey-json-1.19.jar:/usr/hadoop/share/hadoop/common/lib/json-smart-2.3.jar:/usr/hadoop/share/hadoop/common/lib/dnsjava-2.1.7.jar:/usr/hadoop/share/hadoop/common/lib/kerby-util-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/hadoop/share/hadoop/common/lib/nimbus-jose-jwt-4.41.1.jar:/usr/hadoop/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/usr/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/usr/hadoop/share/hadoop/common/lib/kerb-core-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jetty-io-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jetty-server-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jetty-webapp-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jsch-0.1.54.jar:/usr/hadoop/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/accessors-smart-1.2.jar:/usr/hadoop/share/hadoop/common/lib/jetty-security-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/usr/hadoop/share/hadoop/common/lib/jersey-server-1.19.jar:/usr/hadoop/share/hadoop/common/lib/jetty-servlet-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/asm-5.0.4.jar:/usr/hadoop/share/hadoop/common/lib/re2j-1.1.jar:/usr/hadoop/share/hadoop/common/lib/kerb-server-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/commons-text-1.4.jar:/usr/hadoop/share/hadoop/common/lib/jackson-core-2.9.5.jar:/usr/hadoop/share/hadoop/common/lib/xz-1.0.jar:/usr/hadoop/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/jettison-1.1.jar:/usr/hadoop/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/usr/hadoop/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/usr/hadoop/share/hadoop/common/lib/jetty-xml-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/zookeeper-3.4.13.jar:/usr/hadoop/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/snappy-java-1.0.5.jar:/usr/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/hadoop/share/hadoop/common/lib/curator-framework-2.12.0.jar:/usr/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/hadoop/share/hadoop/common/lib/stax2-api-3.1.4.jar:/usr/hadoop/share/hadoop/common/lib/httpclient-4.5.2.jar:/usr/hadoop/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/hadoop/share/hadoop/common/lib/hadoop-auth-3.2.0.jar:/usr/hadoop/share/hadoop/common/lib/kerb-common-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/usr/hadoop/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/hadoop/share/hadoop/common/lib/commons-beanutils-1.9.3.jar:/usr/hadoop/share/hadoop/common/lib/jersey-servlet-1.19.jar:/usr/hadoop/share/hadoop/common/lib/jetty-http-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jetty-util-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/hadoop/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/usr/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/hadoop/share/hadoop/common/lib/curator-recipes-2.12.0.jar:/usr/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/usr/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/usr/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/hadoop/share/hadoop/common/lib/httpcore-4.4.4.jar:/usr/hadoop/share/hadoop/common/hadoop-nfs-3.2.0.jar:/usr/hadoop/share/hadoop/common/hadoop-kms-3.2.0.jar:/usr/hadoop/share/hadoop/common/hadoop-common-3.2.0-tests.jar:/usr/hadoop/share/hadoop/common/hadoop-common-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs:/usr/hadoop/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-io-2.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-annotations-2.9.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-codec-1.11.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/netty-3.10.5.Final.jar:/usr/hadoop/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/avro-1.7.7.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/gson-2.2.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-net-3.6.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-lang3-3.7.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/hadoop-annotations-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-databind-2.9.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/curator-client-2.12.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-util-ajax-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/json-smart-2.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/dnsjava-2.1.7.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/nimbus-jose-jwt-4.41.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-io-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-server-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-webapp-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/jsch-0.1.54.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-security-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-servlet-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/asm-5.0.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/re2j-1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-text-1.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-core-2.9.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/xz-1.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/jettison-1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/usr/hadoop/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-xml-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/okio-1.6.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/curator-framework-2.12.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/httpclient-4.5.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-compress-1.4.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/hadoop-auth-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/usr/hadoop/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-beanutils-1.9.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-http-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/netty-all-4.0.52.Final.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-util-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/curator-recipes-2.12.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/paranamer-2.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/httpcore-4.4.4.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/hadoop/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.0-tests.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.2.0.jar:/usr/hadoop/share/hadoop/yarn:/usr/hadoop/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/usr/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-base-2.9.5.jar:/usr/hadoop/share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/usr/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.9.5.jar:/usr/hadoop/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/usr/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/hadoop/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/usr/hadoop/share/hadoop/yarn/lib/guice-4.0.jar:/usr/hadoop/share/hadoop/yarn/lib/java-util-1.9.0.jar:/usr/hadoop/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/usr/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/hadoop/share/hadoop/yarn/lib/objenesis-1.0.jar:/usr/hadoop/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/usr/hadoop/share/hadoop/yarn/lib/json-io-2.5.1.jar:/usr/hadoop/share/hadoop/yarn/lib/jersey-client-1.19.jar:/usr/hadoop/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/usr/hadoop/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.9.5.jar:/usr/hadoop/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/usr/hadoop/share/hadoop/yarn/lib/fst-2.50.jar:/usr/hadoop/share/hadoop/yarn/lib/snakeyaml-1.16.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-common-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-services-core-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-router-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-submarine-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-api-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-client-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-services-api-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-registry-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/aliyun-sdk-oss-2.8.3.jar:/usr/hadoop/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.375.jar:/usr/hadoop/share/hadoop/tools/lib/azure-data-lake-store-sdk-2.2.9.jar:/usr/hadoop/share/hadoop/tools/lib/azure-keyvault-core-1.0.0.jar:/usr/hadoop/share/hadoop/tools/lib/azure-storage-7.0.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-aliyun-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-archive-logs-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-archives-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-aws-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-azure-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-azure-datalake-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-datajoin-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-distcp-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-extras-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-fs2img-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-gridmix-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-kafka-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-openstack-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-resourceestimator-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-rumen-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-sls-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/jdom-1.1.jar:/usr/hadoop/share/hadoop/tools/lib/kafka-clients-0.8.2.1.jar:/usr/hadoop/share/hadoop/tools/lib/lz4-1.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/ojalgo-43.0.jar:/usr/hadoop/share/hadoop/tools/lib/wildfly-openssl-1.0.4.Final.jar:/usr/hive/lib/HikariCP-2.6.1.jar:/usr/hive/lib/ST4-4.0.4.jar:/usr/hive/lib/accumulo-core-1.7.3.jar:/usr/hive/lib/accumulo-fate-1.7.3.jar:/usr/hive/lib/accumulo-start-1.7.3.jar:/usr/hive/lib/accumulo-trace-1.7.3.jar:/usr/hive/lib/aircompressor-0.10.jar:/usr/hive/lib/ant-1.9.1.jar:/usr/hive/lib/ant-launcher-1.9.1.jar:/usr/hive/lib/antlr-runtime-3.5.2.jar:/usr/hive/lib/antlr4-runtime-4.5.jar:/usr/hive/lib/aopalliance-repackaged-2.5.0-b32.jar:/usr/hive/lib/apache-curator-2.12.0.pom:/usr/hive/lib/apache-jsp-9.3.20.v20170531.jar:/usr/hive/lib/apache-jstl-9.3.20.v20170531.jar:/usr/hive/lib/arrow-format-0.8.0.jar:/usr/hive/lib/arrow-memory-0.8.0.jar:/usr/hive/lib/arrow-vector-0.8.0.jar:/usr/hive/lib/asm-5.0.1.jar:/usr/hive/lib/asm-commons-5.0.1.jar:/usr/hive/lib/asm-tree-5.0.1.jar:/usr/hive/lib/audience-annotations-0.5.0.jar:/usr/hive/lib/avatica-1.11.0.jar:/usr/hive/lib/avro-1.7.7.jar:/usr/hive/lib/bonecp-0.8.0.RELEASE.jar:/usr/hive/lib/calcite-core-1.16.0.jar:/usr/hive/lib/calcite-druid-1.16.0.jar:/usr/hive/lib/calcite-linq4j-1.16.0.jar:/usr/hive/lib/commons-cli-1.2.jar:/usr/hive/lib/commons-codec-1.7.jar:/usr/hive/lib/commons-collections4-4.1.jar:/usr/hive/lib/commons-compiler-2.7.6.jar:/usr/hive/lib/commons-compress-1.9.jar:/usr/hive/lib/commons-crypto-1.0.0.jar:/usr/hive/lib/commons-dbcp-1.4.jar:/usr/hive/lib/commons-io-2.4.jar:/usr/hive/lib/commons-lang-2.6.jar:/usr/hive/lib/commons-lang3-3.2.jar:/usr/hive/lib/commons-logging-1.0.4.jar:/usr/hive/lib/commons-math-2.1.jar:/usr/hive/lib/commons-math3-3.6.1.jar:/usr/hive/lib/commons-pool-1.5.4.jar:/usr/hive/lib/commons-vfs2-2.1.jar:/usr/hive/lib/curator-client-2.12.0.jar:/usr/hive/lib/curator-framework-2.12.0.jar:/usr/hive/lib/curator-recipes-2.12.0.jar:/usr/hive/lib/datanucleus-api-jdo-4.2.4.jar:/usr/hive/lib/datanucleus-core-4.1.17.jar:/usr/hive/lib/datanucleus-rdbms-4.1.19.jar:/usr/hive/lib/derby-10.14.1.0.jar:/usr/hive/lib/disruptor-3.3.6.jar:/usr/hive/lib/dropwizard-metrics-hadoop-metrics2-reporter-0.1.2.jar:/usr/hive/lib/druid-hdfs-storage-0.12.0.jar:/usr/hive/lib/ecj-4.4.2.jar:/usr/hive/lib/esri-geometry-api-2.0.0.jar:/usr/hive/lib/findbugs-annotations-1.3.9-1.jar:/usr/hive/lib/flatbuffers-1.2.0-3f79e055.jar:/usr/hive/lib/groovy-all-2.4.11.jar:/usr/hive/lib/gson-2.2.4.jar:/usr/hive/lib/guava-19.0.jar:/usr/hive/lib/hbase-client-2.0.0-alpha4.jar:/usr/hive/lib/hbase-common-2.0.0-alpha4-tests.jar:/usr/hive/lib/hbase-common-2.0.0-alpha4.jar:/usr/hive/lib/hbase-hadoop-compat-2.0.0-alpha4.jar:/usr/hive/lib/hbase-hadoop2-compat-2.0.0-alpha4-tests.jar:/usr/hive/lib/hbase-hadoop2-compat-2.0.0-alpha4.jar:/usr/hive/lib/hbase-http-2.0.0-alpha4.jar:/usr/hive/lib/hbase-mapreduce-2.0.0-alpha4.jar:/usr/hive/lib/hbase-metrics-2.0.0-alpha4.jar:/usr/hive/lib/hbase-metrics-api-2.0.0-alpha4.jar:/usr/hive/lib/hbase-prefix-tree-2.0.0-alpha4.jar:/usr/hive/lib/hbase-procedure-2.0.0-alpha4.jar:/usr/hive/lib/hbase-protocol-2.0.0-alpha4.jar:/usr/hive/lib/hbase-protocol-shaded-2.0.0-alpha4.jar:/usr/hive/lib/hbase-replication-2.0.0-alpha4.jar:/usr/hive/lib/hbase-server-2.0.0-alpha4.jar:/usr/hive/lib/hbase-shaded-miscellaneous-1.0.1.jar:/usr/hive/lib/hbase-shaded-netty-1.0.1.jar:/usr/hive/lib/hbase-shaded-protobuf-1.0.1.jar:/usr/hive/lib/hive-accumulo-handler-3.1.2.jar:/usr/hive/lib/hive-beeline-3.1.2.jar:/usr/hive/lib/hive-classification-3.1.2.jar:/usr/hive/lib/hive-cli-3.1.2.jar:/usr/hive/lib/hive-common-3.1.2.jar:/usr/hive/lib/hive-contrib-3.1.2.jar:/usr/hive/lib/hive-druid-handler-3.1.2.jar:/usr/hive/lib/hive-exec-3.1.2.jar:/usr/hive/lib/hive-hbase-handler-3.1.2.jar:/usr/hive/lib/hive-hcatalog-core-3.1.2.jar:/usr/hive/lib/hive-hcatalog-server-extensions-3.1.2.jar:/usr/hive/lib/hive-hplsql-3.1.2.jar:/usr/hive/lib/hive-jdbc-3.1.2.jar:/usr/hive/lib/hive-jdbc-handler-3.1.2.jar:/usr/hive/lib/hive-kryo-registrator-3.1.2.jar:/usr/hive/lib/hive-llap-client-3.1.2.jar:/usr/hive/lib/hive-llap-common-3.1.2-tests.jar:/usr/hive/lib/hive-llap-common-3.1.2.jar:/usr/hive/lib/hive-llap-ext-client-3.1.2.jar:/usr/hive/lib/hive-llap-server-3.1.2.jar:/usr/hive/lib/hive-llap-tez-3.1.2.jar:/usr/hive/lib/hive-metastore-3.1.2.jar:/usr/hive/lib/hive-serde-3.1.2.jar:/usr/hive/lib/hive-service-3.1.2.jar:/usr/hive/lib/hive-service-rpc-3.1.2.jar:/usr/hive/lib/hive-shims-0.23-3.1.2.jar:/usr/hive/lib/hive-shims-3.1.2.jar:/usr/hive/lib/hive-shims-common-3.1.2.jar:/usr/hive/lib/hive-shims-scheduler-3.1.2.jar:/usr/hive/lib/hive-standalone-metastore-3.1.2.jar:/usr/hive/lib/hive-storage-api-2.7.0.jar:/usr/hive/lib/hive-streaming-3.1.2.jar:/usr/hive/lib/hive-testutils-3.1.2.jar:/usr/hive/lib/hive-upgrade-acid-3.1.2.jar:/usr/hive/lib/hive-vector-code-gen-3.1.2.jar:/usr/hive/lib/hk2-api-2.5.0-b32.jar:/usr/hive/lib/hk2-locator-2.5.0-b32.jar:/usr/hive/lib/hk2-utils-2.5.0-b32.jar:/usr/hive/lib/hppc-0.7.2.jar:/usr/hive/lib/htrace-core-3.2.0-incubating.jar:/usr/hive/lib/httpclient-4.5.2.jar:/usr/hive/lib/httpcore-4.4.4.jar:/usr/hive/lib/ivy-2.4.0.jar:/usr/hive/lib/jackson-annotations-2.9.5.jar:/usr/hive/lib/jackson-core-2.9.5.jar:/usr/hive/lib/jackson-core-asl-1.9.13.jar:/usr/hive/lib/jackson-databind-2.9.5.jar:/usr/hive/lib/jackson-dataformat-smile-2.9.5.jar:/usr/hive/lib/jackson-mapper-asl-1.9.13.jar:/usr/hive/lib/jamon-runtime-2.3.1.jar:/usr/hive/lib/janino-2.7.6.jar:/usr/hive/lib/javassist-3.20.0-GA.jar:/usr/hive/lib/javax.annotation-api-1.2.jar:/usr/hive/lib/javax.inject-2.5.0-b32.jar:/usr/hive/lib/javax.jdo-3.2.0-m3.jar:/usr/hive/lib/javax.servlet-api-3.1.0.jar:/usr/hive/lib/javax.servlet.jsp-2.3.2.jar:/usr/hive/lib/javax.servlet.jsp-api-2.3.1.jar:/usr/hive/lib/javax.ws.rs-api-2.0.1.jar:/usr/hive/lib/javolution-5.5.1.jar:/usr/hive/lib/jaxb-api-2.2.11.jar:/usr/hive/lib/jcodings-1.0.18.jar:/usr/hive/lib/jcommander-1.32.jar:/usr/hive/lib/jdo-api-3.0.1.jar:/usr/hive/lib/jersey-client-2.25.1.jar:/usr/hive/lib/jersey-common-2.25.1.jar:/usr/hive/lib/jersey-container-servlet-core-2.25.1.jar:/usr/hive/lib/jersey-guava-2.25.1.jar:/usr/hive/lib/jersey-media-jaxb-2.25.1.jar:/usr/hive/lib/jersey-server-2.25.1.jar:/usr/hive/lib/jettison-1.1.jar:/usr/hive/lib/jetty-annotations-9.3.20.v20170531.jar:/usr/hive/lib/jetty-client-9.3.20.v20170531.jar:/usr/hive/lib/jetty-http-9.3.20.v20170531.jar:/usr/hive/lib/jetty-io-9.3.20.v20170531.jar:/usr/hive/lib/jetty-jaas-9.3.20.v20170531.jar:/usr/hive/lib/jetty-jndi-9.3.20.v20170531.jar:/usr/hive/lib/jetty-plus-9.3.20.v20170531.jar:/usr/hive/lib/jetty-rewrite-9.3.20.v20170531.jar:/usr/hive/lib/jetty-runner-9.3.20.v20170531.jar:/usr/hive/lib/jetty-schemas-3.1.jar:/usr/hive/lib/jetty-security-9.3.20.v20170531.jar:/usr/hive/lib/jetty-server-9.3.20.v20170531.jar:/usr/hive/lib/jetty-servlet-9.3.20.v20170531.jar:/usr/hive/lib/jetty-util-9.3.20.v20170531.jar:/usr/hive/lib/jetty-webapp-9.3.20.v20170531.jar:/usr/hive/lib/jetty-xml-9.3.20.v20170531.jar:/usr/hive/lib/jline-2.12.jar:/usr/hive/lib/joda-time-2.9.9.jar:/usr/hive/lib/joni-2.1.11.jar:/usr/hive/lib/jpam-1.1.jar:/usr/hive/lib/json-1.8.jar:/usr/hive/lib/jsr305-3.0.0.jar:/usr/hive/lib/jta-1.1.jar:/usr/hive/lib/libfb303-0.9.3.jar:/usr/hive/lib/libthrift-0.9.3.jar:/usr/hive/lib/log4j-1.2-api-2.10.0.jar:/usr/hive/lib/log4j-api-2.10.0.jar:/usr/hive/lib/log4j-core-2.10.0.jar:/usr/hive/lib/log4j-slf4j-impl-2.10.0.jar:/usr/hive/lib/log4j-web-2.10.0.jar:/usr/hive/lib/memory-0.9.0.jar:/usr/hive/lib/metrics-core-3.1.0.jar:/usr/hive/lib/metrics-json-3.1.0.jar:/usr/hive/lib/metrics-jvm-3.1.0.jar:/usr/hive/lib/mysql-metadata-storage-0.12.0.jar:/usr/hive/lib/netty-3.10.5.Final.jar:/usr/hive/lib/netty-all-4.1.17.Final.jar:/usr/hive/lib/netty-buffer-4.1.17.Final.jar:/usr/hive/lib/netty-common-4.1.17.Final.jar:/usr/hive/lib/opencsv-2.3.jar:/usr/hive/lib/orc-core-1.5.6.jar:/usr/hive/lib/orc-shims-1.5.6.jar:/usr/hive/lib/org.abego.treelayout.core-1.0.1.jar:/usr/hive/lib/osgi-resource-locator-1.0.1.jar:/usr/hive/lib/paranamer-2.3.jar:/usr/hive/lib/parquet-hadoop-bundle-1.10.0.jar:/usr/hive/lib/php:/usr/hive/lib/postgresql-9.4.1208.jre7.jar:/usr/hive/lib/postgresql-metadata-storage-0.12.0.jar:/usr/hive/lib/protobuf-java-2.5.0.jar:/usr/hive/lib/py:/usr/hive/lib/sketches-core-0.9.0.jar:/usr/hive/lib/snappy-java-1.1.4.jar:/usr/hive/lib/sqlline-1.3.0.jar:/usr/hive/lib/stax-api-1.0.1.jar:/usr/hive/lib/super-csv-2.2.0.jar:/usr/hive/lib/taglibs-standard-impl-1.2.5.jar:/usr/hive/lib/taglibs-standard-spec-1.2.5.jar:/usr/hive/lib/tempus-fugit-1.1.jar:/usr/hive/lib/transaction-api-1.1.jar:/usr/hive/lib/validation-api-1.1.0.Final.jar:/usr/hive/lib/velocity-1.5.jar:/usr/hive/lib/websocket-api-9.3.20.v20170531.jar:/usr/hive/lib/websocket-client-9.3.20.v20170531.jar:/usr/hive/lib/websocket-common-9.3.20.v20170531.jar:/usr/hive/lib/websocket-server-9.3.20.v20170531.jar:/usr/hive/lib/websocket-servlet-9.3.20.v20170531.jar:/usr/hive/lib/zookeeper-3.4.6.jar
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r e97acb3bd8f3befd27418996fa5d4b50bf2e17bf; compiled by 'sunilg' on 2019-01-08T06:08Z
+STARTUP_MSG:   java = 1.8.0_252
+************************************************************/
+2021-06-27 13:11:28,318 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2021-06-27 13:11:28,700 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-06-27 13:11:28,929 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2021-06-27 13:11:29,072 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2021-06-27 13:11:29,073 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: SecondaryNameNode metrics system started
+2021-06-27 13:11:29,700 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edit logging is async:true
+2021-06-27 13:11:29,730 INFO org.apache.hadoop.hdfs.server.common.Storage: Lock on /tmp/hadoop-root/dfs/namesecondary/in_use.lock acquired by nodename 163@master
+2021-06-27 13:11:29,753 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: KeyProvider: null
+2021-06-27 13:11:29,755 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsLock is fair: true
+2021-06-27 13:11:29,757 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2021-06-27 13:11:29,757 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner             = root (auth:SIMPLE)
+2021-06-27 13:11:29,757 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup          = supergroup
+2021-06-27 13:11:29,757 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled = true
+2021-06-27 13:11:29,758 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: HA Enabled: false
+2021-06-27 13:11:29,839 INFO org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2021-06-27 13:11:29,870 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2021-06-27 13:11:29,870 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2021-06-27 13:11:29,877 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2021-06-27 13:11:29,878 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: The block deletion will start around 2021 Jun 27 13:11:29
+2021-06-27 13:11:29,881 INFO org.apache.hadoop.util.GSet: Computing capacity for map BlocksMap
+2021-06-27 13:11:29,881 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2021-06-27 13:11:29,884 INFO org.apache.hadoop.util.GSet: 2.0% max memory 1.7 GB = 35.4 MB
+2021-06-27 13:11:29,884 INFO org.apache.hadoop.util.GSet: capacity      = 2^22 = 4194304 entries
+2021-06-27 13:11:29,902 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Storage policy satisfier is disabled
+2021-06-27 13:11:29,903 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2021-06-27 13:11:29,917 INFO org.apache.hadoop.conf.Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2021-06-27 13:11:29,918 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2021-06-27 13:11:29,918 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2021-06-27 13:11:29,918 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2021-06-27 13:11:29,919 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: defaultReplication         = 2
+2021-06-27 13:11:29,919 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplication             = 512
+2021-06-27 13:11:29,919 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: minReplication             = 1
+2021-06-27 13:11:29,919 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplicationStreams      = 2
+2021-06-27 13:11:29,919 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2021-06-27 13:11:29,919 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: encryptDataTransfer        = false
+2021-06-27 13:11:29,919 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2021-06-27 13:11:29,995 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2021-06-27 13:11:29,995 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2021-06-27 13:11:29,995 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2021-06-27 13:11:29,996 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2021-06-27 13:11:30,013 INFO org.apache.hadoop.util.GSet: Computing capacity for map INodeMap
+2021-06-27 13:11:30,013 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2021-06-27 13:11:30,014 INFO org.apache.hadoop.util.GSet: 1.0% max memory 1.7 GB = 17.7 MB
+2021-06-27 13:11:30,014 INFO org.apache.hadoop.util.GSet: capacity      = 2^21 = 2097152 entries
+2021-06-27 13:11:30,015 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: ACLs enabled? false
+2021-06-27 13:11:30,015 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2021-06-27 13:11:30,016 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: XAttrs enabled? true
+2021-06-27 13:11:30,016 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occurring more than 10 times
+2021-06-27 13:11:30,024 INFO org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2021-06-27 13:11:30,028 INFO org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: SkipList is disabled
+2021-06-27 13:11:30,035 INFO org.apache.hadoop.util.GSet: Computing capacity for map cachedBlocks
+2021-06-27 13:11:30,035 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2021-06-27 13:11:30,035 INFO org.apache.hadoop.util.GSet: 0.25% max memory 1.7 GB = 4.4 MB
+2021-06-27 13:11:30,035 INFO org.apache.hadoop.util.GSet: capacity      = 2^19 = 524288 entries
+2021-06-27 13:11:30,049 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2021-06-27 13:11:30,049 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2021-06-27 13:11:30,049 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2021-06-27 13:11:30,063 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2021-06-27 13:11:30,063 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :1000000 txns
+2021-06-27 13:11:30,074 INFO org.apache.hadoop.hdfs.DFSUtil: Starting Web-server for secondary at: http://0.0.0.0:9868
+2021-06-27 13:11:30,278 INFO org.eclipse.jetty.util.log: Logging initialized @2888ms
+2021-06-27 13:11:30,544 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2021-06-27 13:11:30,551 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.secondary is not defined
+2021-06-27 13:11:30,572 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2021-06-27 13:11:30,576 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context secondary
+2021-06-27 13:11:30,576 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2021-06-27 13:11:30,577 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2021-06-27 13:11:30,642 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 9868
+2021-06-27 13:11:30,645 INFO org.eclipse.jetty.server.Server: jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2021-06-27 13:11:30,712 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@616fe72b{/logs,file:///usr/hadoop/logs/,AVAILABLE}
+2021-06-27 13:11:30,713 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@7e7b159b{/static,file:///usr/hadoop/share/hadoop/hdfs/webapps/static/,AVAILABLE}
+2021-06-27 13:11:30,882 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@1a7288a3{/,file:///usr/hadoop/share/hadoop/hdfs/webapps/secondary/,AVAILABLE}{/secondary}
+2021-06-27 13:11:30,921 INFO org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@4b20ca2b{HTTP/1.1,[http/1.1]}{0.0.0.0:9868}
+2021-06-27 13:11:30,921 INFO org.eclipse.jetty.server.Server: Started @3532ms
+2021-06-27 13:11:30,922 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2021-06-27 13:12:31,139 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Image has changed. Downloading updated image from NN.
+2021-06-27 13:12:31,149 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://master:9870/imagetransfer?getimage=1&txid=0&storageInfo=-65:5612119:1624799484692:CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c&bootstrapstandby=false
+2021-06-27 13:12:31,339 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.00s. The file download took 0.00s at 0.00 KB/s. Synchronous (fsync) write to disk of /tmp/hadoop-root/dfs/namesecondary/current/fsimage.ckpt_0000000000000000000 took 0.00s.
+2021-06-27 13:12:31,339 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000000000 size 396 bytes.
+2021-06-27 13:12:31,347 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://master:9870/imagetransfer?getedit=1&startTxId=1&endTxId=290&storageInfo=-65:5612119:1624799484692:CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c
+2021-06-27 13:12:31,361 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.00s. The file download took 0.00s at 40000.00 KB/s. Synchronous (fsync) write to disk of /tmp/hadoop-root/dfs/namesecondary/current/edits_tmp_0000000000000000001-0000000000000000290_0000000000037804743 took 0.00s.
+2021-06-27 13:12:31,361 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file edits_tmp_0000000000000000001-0000000000000000290_0000000000037804743 size 0 bytes.
+2021-06-27 13:12:31,511 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Loading 1 INodes.
+2021-06-27 13:12:31,568 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Loaded FSImage in 0 seconds.
+2021-06-27 13:12:31,568 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Loaded image for txid 0 from /tmp/hadoop-root/dfs/namesecondary/current/fsimage_0000000000000000000
+2021-06-27 13:12:31,568 INFO org.apache.hadoop.hdfs.server.namenode.NameCache: initialized with 0 entries 0 lookups
+2021-06-27 13:12:31,577 INFO org.apache.hadoop.hdfs.server.namenode.Checkpointer: Checkpointer about to load edits from 1 stream(s).
+2021-06-27 13:12:31,583 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Reading /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000290 expecting start txid #1
+2021-06-27 13:12:31,584 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Start loading edits file /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000290 maxTxnsToRead = 9223372036854775807
+2021-06-27 13:12:31,730 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Edits file /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000290 of size 41559 edits # 290 loaded in 0 seconds
+2021-06-27 13:12:31,738 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Saving image file /tmp/hadoop-root/dfs/namesecondary/current/fsimage.ckpt_0000000000000000290 using no compression
+2021-06-27 13:12:31,795 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Image file /tmp/hadoop-root/dfs/namesecondary/current/fsimage.ckpt_0000000000000000290 of size 1619 bytes saved in 0 seconds .
+2021-06-27 13:12:31,798 INFO org.apache.hadoop.hdfs.server.namenode.FSImageTransactionalStorageInspector: No version file in /tmp/hadoop-root/dfs/namesecondary
+2021-06-27 13:12:31,805 INFO org.apache.hadoop.hdfs.server.namenode.FSImageTransactionalStorageInspector: No version file in /tmp/hadoop-root/dfs/namesecondary
+2021-06-27 13:12:31,839 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Image Transfer timeout configured to 60000 milliseconds
+2021-06-27 13:12:31,840 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-root/dfs/namesecondary/current/fsimage_0000000000000000290, fileSize: 1619. Sent total: 1619 bytes. Size of last segment intended to send: -1 bytes.
+2021-06-27 13:12:31,917 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Uploaded image with txid 290 to namenode at http://master:9870 in 0.096 seconds
+2021-06-27 13:12:31,918 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 1619
+2021-06-27 14:45:29,650 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Image has not changed. Will not download image.
+2021-06-27 14:45:29,653 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://master:9870/imagetransfer?getedit=1&startTxId=291&endTxId=296&storageInfo=-65:5612119:1624799484692:CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c
+2021-06-27 14:45:29,665 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.00s. The file download took 0.00s at 0.00 KB/s. Synchronous (fsync) write to disk of /tmp/hadoop-root/dfs/namesecondary/current/edits_tmp_0000000000000000291-0000000000000000296_0000000000041451702 took 0.00s.
+2021-06-27 14:45:29,665 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file edits_tmp_0000000000000000291-0000000000000000296_0000000000041451702 size 0 bytes.
+2021-06-27 14:45:29,666 INFO org.apache.hadoop.hdfs.server.namenode.Checkpointer: Checkpointer about to load edits from 1 stream(s).
+2021-06-27 14:45:29,666 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Reading /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000291-0000000000000000296 expecting start txid #291
+2021-06-27 14:45:29,666 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Start loading edits file /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000291-0000000000000000296 maxTxnsToRead = 9223372036854775807
+2021-06-27 14:45:29,670 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Edits file /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000291-0000000000000000296 of size 538 edits # 6 loaded in 0 seconds
+2021-06-27 14:45:29,672 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Saving image file /tmp/hadoop-root/dfs/namesecondary/current/fsimage.ckpt_0000000000000000296 using no compression
+2021-06-27 14:45:29,690 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Image file /tmp/hadoop-root/dfs/namesecondary/current/fsimage.ckpt_0000000000000000296 of size 1939 bytes saved in 0 seconds .
+2021-06-27 14:45:29,707 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 290
+2021-06-27 14:45:29,707 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Purging old image FSImageFile(file=/tmp/hadoop-root/dfs/namesecondary/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2021-06-27 14:45:29,724 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-root/dfs/namesecondary/current/fsimage_0000000000000000296, fileSize: 1939. Sent total: 1939 bytes. Size of last segment intended to send: -1 bytes.
+2021-06-27 14:45:29,784 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Uploaded image with txid 296 to namenode at http://master:9870 in 0.061 seconds
+2021-06-27 14:45:29,784 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 1939
+2021-06-27 15:45:25,984 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Image has not changed. Will not download image.
+2021-06-27 15:45:25,984 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://master:9870/imagetransfer?getedit=1&startTxId=297&endTxId=1150&storageInfo=-65:5612119:1624799484692:CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c
+2021-06-27 15:45:25,993 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.00s. The file download took 0.00s at 85000.00 KB/s. Synchronous (fsync) write to disk of /tmp/hadoop-root/dfs/namesecondary/current/edits_tmp_0000000000000000297-0000000000000001150_0000000000045052224 took 0.00s.
+2021-06-27 15:45:25,993 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file edits_tmp_0000000000000000297-0000000000000001150_0000000000045052224 size 0 bytes.
+2021-06-27 15:45:25,993 INFO org.apache.hadoop.hdfs.server.namenode.Checkpointer: Checkpointer about to load edits from 1 stream(s).
+2021-06-27 15:45:25,993 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Reading /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000297-0000000000000001150 expecting start txid #297
+2021-06-27 15:45:25,993 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Start loading edits file /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000297-0000000000000001150 maxTxnsToRead = 9223372036854775807
+2021-06-27 15:45:26,012 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: Replication remains unchanged at 2 for /user/root/.sparkStaging/application_1624799496767_0001/__spark_conf__.zip
+2021-06-27 15:45:26,098 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: Replication remains unchanged at 2 for /user/root/.sparkStaging/application_1624799496767_0002/__spark_conf__.zip
+2021-06-27 15:45:26,099 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Edits file /tmp/hadoop-root/dfs/namesecondary/current/edits_0000000000000000297-0000000000000001150 of size 87118 edits # 854 loaded in 0 seconds
+2021-06-27 15:45:26,136 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Saving image file /tmp/hadoop-root/dfs/namesecondary/current/fsimage.ckpt_0000000000000001150 using no compression
+2021-06-27 15:45:26,220 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Image file /tmp/hadoop-root/dfs/namesecondary/current/fsimage.ckpt_0000000000000001150 of size 14226 bytes saved in 0 seconds .
+2021-06-27 15:45:26,223 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 296
+2021-06-27 15:45:26,223 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Purging old image FSImageFile(file=/tmp/hadoop-root/dfs/namesecondary/current/fsimage_0000000000000000290, cpktTxId=0000000000000000290)
+2021-06-27 15:45:26,230 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-root/dfs/namesecondary/current/fsimage_0000000000000001150, fileSize: 14226. Sent total: 14226 bytes. Size of last segment intended to send: -1 bytes.
+2021-06-27 15:45:26,301 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Uploaded image with txid 1150 to namenode at http://master:9870 in 0.072 seconds
+2021-06-27 15:45:26,301 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 14226
+2021-06-27 16:07:20,161 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = master/172.28.1.1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.2.0
+STARTUP_MSG:   classpath = /usr/hadoop/etc/hadoop:/usr/hadoop/share/hadoop/common/lib/token-provider-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/usr/hadoop/share/hadoop/common/lib/commons-io-2.5.jar:/usr/hadoop/share/hadoop/common/lib/jackson-annotations-2.9.5.jar:/usr/hadoop/share/hadoop/common/lib/commons-codec-1.11.jar:/usr/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/hadoop/share/hadoop/common/lib/netty-3.10.5.Final.jar:/usr/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/hadoop/share/hadoop/common/lib/jersey-core-1.19.jar:/usr/hadoop/share/hadoop/common/lib/avro-1.7.7.jar:/usr/hadoop/share/hadoop/common/lib/metrics-core-3.2.4.jar:/usr/hadoop/share/hadoop/common/lib/kerb-client-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/gson-2.2.4.jar:/usr/hadoop/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/usr/hadoop/share/hadoop/common/lib/guava-11.0.2.jar:/usr/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/kerby-config-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/commons-net-3.6.jar:/usr/hadoop/share/hadoop/common/lib/commons-lang3-3.7.jar:/usr/hadoop/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/hadoop-annotations-3.2.0.jar:/usr/hadoop/share/hadoop/common/lib/jackson-databind-2.9.5.jar:/usr/hadoop/share/hadoop/common/lib/kerb-util-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/curator-client-2.12.0.jar:/usr/hadoop/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/usr/hadoop/share/hadoop/common/lib/jersey-json-1.19.jar:/usr/hadoop/share/hadoop/common/lib/json-smart-2.3.jar:/usr/hadoop/share/hadoop/common/lib/dnsjava-2.1.7.jar:/usr/hadoop/share/hadoop/common/lib/kerby-util-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/hadoop/share/hadoop/common/lib/nimbus-jose-jwt-4.41.1.jar:/usr/hadoop/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/usr/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/usr/hadoop/share/hadoop/common/lib/kerb-core-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jetty-io-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jetty-server-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jetty-webapp-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jsch-0.1.54.jar:/usr/hadoop/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/accessors-smart-1.2.jar:/usr/hadoop/share/hadoop/common/lib/jetty-security-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/usr/hadoop/share/hadoop/common/lib/jersey-server-1.19.jar:/usr/hadoop/share/hadoop/common/lib/jetty-servlet-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/asm-5.0.4.jar:/usr/hadoop/share/hadoop/common/lib/re2j-1.1.jar:/usr/hadoop/share/hadoop/common/lib/kerb-server-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/commons-text-1.4.jar:/usr/hadoop/share/hadoop/common/lib/jackson-core-2.9.5.jar:/usr/hadoop/share/hadoop/common/lib/xz-1.0.jar:/usr/hadoop/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/jettison-1.1.jar:/usr/hadoop/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/usr/hadoop/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/usr/hadoop/share/hadoop/common/lib/jetty-xml-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/zookeeper-3.4.13.jar:/usr/hadoop/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/snappy-java-1.0.5.jar:/usr/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/hadoop/share/hadoop/common/lib/curator-framework-2.12.0.jar:/usr/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/hadoop/share/hadoop/common/lib/stax2-api-3.1.4.jar:/usr/hadoop/share/hadoop/common/lib/httpclient-4.5.2.jar:/usr/hadoop/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/hadoop/share/hadoop/common/lib/hadoop-auth-3.2.0.jar:/usr/hadoop/share/hadoop/common/lib/kerb-common-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/usr/hadoop/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/hadoop/share/hadoop/common/lib/commons-beanutils-1.9.3.jar:/usr/hadoop/share/hadoop/common/lib/jersey-servlet-1.19.jar:/usr/hadoop/share/hadoop/common/lib/jetty-http-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jetty-util-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/hadoop/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/usr/hadoop/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/usr/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/hadoop/share/hadoop/common/lib/curator-recipes-2.12.0.jar:/usr/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/usr/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/usr/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/hadoop/share/hadoop/common/lib/httpcore-4.4.4.jar:/usr/hadoop/share/hadoop/common/hadoop-nfs-3.2.0.jar:/usr/hadoop/share/hadoop/common/hadoop-kms-3.2.0.jar:/usr/hadoop/share/hadoop/common/hadoop-common-3.2.0-tests.jar:/usr/hadoop/share/hadoop/common/hadoop-common-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs:/usr/hadoop/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-io-2.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-annotations-2.9.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-codec-1.11.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/netty-3.10.5.Final.jar:/usr/hadoop/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/avro-1.7.7.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/gson-2.2.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-net-3.6.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-lang3-3.7.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/hadoop-annotations-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-databind-2.9.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/curator-client-2.12.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-util-ajax-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/json-smart-2.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/dnsjava-2.1.7.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/nimbus-jose-jwt-4.41.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-io-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-server-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-webapp-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/jsch-0.1.54.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-security-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-servlet-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/asm-5.0.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/re2j-1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-text-1.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-core-2.9.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/xz-1.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/jettison-1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/usr/hadoop/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-xml-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/okio-1.6.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/curator-framework-2.12.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/usr/hadoop/share/hadoop/hdfs/lib/httpclient-4.5.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-compress-1.4.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/hadoop-auth-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/usr/hadoop/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-beanutils-1.9.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-http-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/netty-all-4.0.52.Final.jar:/usr/hadoop/share/hadoop/hdfs/lib/jetty-util-9.3.24.v20180605.jar:/usr/hadoop/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/hadoop/share/hadoop/hdfs/lib/curator-recipes-2.12.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/hadoop/share/hadoop/hdfs/lib/paranamer-2.3.jar:/usr/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/hadoop/share/hadoop/hdfs/lib/httpcore-4.4.4.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.0-tests.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.0.jar:/usr/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/hadoop/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.0-tests.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.0.jar:/usr/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.2.0.jar:/usr/hadoop/share/hadoop/yarn:/usr/hadoop/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/usr/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-base-2.9.5.jar:/usr/hadoop/share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/usr/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.9.5.jar:/usr/hadoop/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/usr/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/hadoop/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/usr/hadoop/share/hadoop/yarn/lib/guice-4.0.jar:/usr/hadoop/share/hadoop/yarn/lib/java-util-1.9.0.jar:/usr/hadoop/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/usr/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/hadoop/share/hadoop/yarn/lib/objenesis-1.0.jar:/usr/hadoop/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/usr/hadoop/share/hadoop/yarn/lib/json-io-2.5.1.jar:/usr/hadoop/share/hadoop/yarn/lib/jersey-client-1.19.jar:/usr/hadoop/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/usr/hadoop/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.9.5.jar:/usr/hadoop/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/usr/hadoop/share/hadoop/yarn/lib/fst-2.50.jar:/usr/hadoop/share/hadoop/yarn/lib/snakeyaml-1.16.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-common-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-services-core-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-router-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-submarine-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-api-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-client-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-services-api-3.2.0.jar:/usr/hadoop/share/hadoop/yarn/hadoop-yarn-registry-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/aliyun-sdk-oss-2.8.3.jar:/usr/hadoop/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.375.jar:/usr/hadoop/share/hadoop/tools/lib/azure-data-lake-store-sdk-2.2.9.jar:/usr/hadoop/share/hadoop/tools/lib/azure-keyvault-core-1.0.0.jar:/usr/hadoop/share/hadoop/tools/lib/azure-storage-7.0.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-aliyun-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-archive-logs-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-archives-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-aws-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-azure-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-azure-datalake-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-datajoin-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-distcp-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-extras-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-fs2img-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-gridmix-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-kafka-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-openstack-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-resourceestimator-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-rumen-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-sls-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/jdom-1.1.jar:/usr/hadoop/share/hadoop/tools/lib/kafka-clients-0.8.2.1.jar:/usr/hadoop/share/hadoop/tools/lib/lz4-1.2.0.jar:/usr/hadoop/share/hadoop/tools/lib/ojalgo-43.0.jar:/usr/hadoop/share/hadoop/tools/lib/wildfly-openssl-1.0.4.Final.jar:/usr/hive/lib/HikariCP-2.6.1.jar:/usr/hive/lib/ST4-4.0.4.jar:/usr/hive/lib/accumulo-core-1.7.3.jar:/usr/hive/lib/accumulo-fate-1.7.3.jar:/usr/hive/lib/accumulo-start-1.7.3.jar:/usr/hive/lib/accumulo-trace-1.7.3.jar:/usr/hive/lib/aircompressor-0.10.jar:/usr/hive/lib/ant-1.9.1.jar:/usr/hive/lib/ant-launcher-1.9.1.jar:/usr/hive/lib/antlr-runtime-3.5.2.jar:/usr/hive/lib/antlr4-runtime-4.5.jar:/usr/hive/lib/aopalliance-repackaged-2.5.0-b32.jar:/usr/hive/lib/apache-curator-2.12.0.pom:/usr/hive/lib/apache-jsp-9.3.20.v20170531.jar:/usr/hive/lib/apache-jstl-9.3.20.v20170531.jar:/usr/hive/lib/arrow-format-0.8.0.jar:/usr/hive/lib/arrow-memory-0.8.0.jar:/usr/hive/lib/arrow-vector-0.8.0.jar:/usr/hive/lib/asm-5.0.1.jar:/usr/hive/lib/asm-commons-5.0.1.jar:/usr/hive/lib/asm-tree-5.0.1.jar:/usr/hive/lib/audience-annotations-0.5.0.jar:/usr/hive/lib/avatica-1.11.0.jar:/usr/hive/lib/avro-1.7.7.jar:/usr/hive/lib/bonecp-0.8.0.RELEASE.jar:/usr/hive/lib/calcite-core-1.16.0.jar:/usr/hive/lib/calcite-druid-1.16.0.jar:/usr/hive/lib/calcite-linq4j-1.16.0.jar:/usr/hive/lib/commons-cli-1.2.jar:/usr/hive/lib/commons-codec-1.7.jar:/usr/hive/lib/commons-collections4-4.1.jar:/usr/hive/lib/commons-compiler-2.7.6.jar:/usr/hive/lib/commons-compress-1.9.jar:/usr/hive/lib/commons-crypto-1.0.0.jar:/usr/hive/lib/commons-dbcp-1.4.jar:/usr/hive/lib/commons-io-2.4.jar:/usr/hive/lib/commons-lang-2.6.jar:/usr/hive/lib/commons-lang3-3.2.jar:/usr/hive/lib/commons-logging-1.0.4.jar:/usr/hive/lib/commons-math-2.1.jar:/usr/hive/lib/commons-math3-3.6.1.jar:/usr/hive/lib/commons-pool-1.5.4.jar:/usr/hive/lib/commons-vfs2-2.1.jar:/usr/hive/lib/curator-client-2.12.0.jar:/usr/hive/lib/curator-framework-2.12.0.jar:/usr/hive/lib/curator-recipes-2.12.0.jar:/usr/hive/lib/datanucleus-api-jdo-4.2.4.jar:/usr/hive/lib/datanucleus-core-4.1.17.jar:/usr/hive/lib/datanucleus-rdbms-4.1.19.jar:/usr/hive/lib/derby-10.14.1.0.jar:/usr/hive/lib/disruptor-3.3.6.jar:/usr/hive/lib/dropwizard-metrics-hadoop-metrics2-reporter-0.1.2.jar:/usr/hive/lib/druid-hdfs-storage-0.12.0.jar:/usr/hive/lib/ecj-4.4.2.jar:/usr/hive/lib/esri-geometry-api-2.0.0.jar:/usr/hive/lib/findbugs-annotations-1.3.9-1.jar:/usr/hive/lib/flatbuffers-1.2.0-3f79e055.jar:/usr/hive/lib/groovy-all-2.4.11.jar:/usr/hive/lib/gson-2.2.4.jar:/usr/hive/lib/guava-19.0.jar:/usr/hive/lib/hbase-client-2.0.0-alpha4.jar:/usr/hive/lib/hbase-common-2.0.0-alpha4-tests.jar:/usr/hive/lib/hbase-common-2.0.0-alpha4.jar:/usr/hive/lib/hbase-hadoop-compat-2.0.0-alpha4.jar:/usr/hive/lib/hbase-hadoop2-compat-2.0.0-alpha4-tests.jar:/usr/hive/lib/hbase-hadoop2-compat-2.0.0-alpha4.jar:/usr/hive/lib/hbase-http-2.0.0-alpha4.jar:/usr/hive/lib/hbase-mapreduce-2.0.0-alpha4.jar:/usr/hive/lib/hbase-metrics-2.0.0-alpha4.jar:/usr/hive/lib/hbase-metrics-api-2.0.0-alpha4.jar:/usr/hive/lib/hbase-prefix-tree-2.0.0-alpha4.jar:/usr/hive/lib/hbase-procedure-2.0.0-alpha4.jar:/usr/hive/lib/hbase-protocol-2.0.0-alpha4.jar:/usr/hive/lib/hbase-protocol-shaded-2.0.0-alpha4.jar:/usr/hive/lib/hbase-replication-2.0.0-alpha4.jar:/usr/hive/lib/hbase-server-2.0.0-alpha4.jar:/usr/hive/lib/hbase-shaded-miscellaneous-1.0.1.jar:/usr/hive/lib/hbase-shaded-netty-1.0.1.jar:/usr/hive/lib/hbase-shaded-protobuf-1.0.1.jar:/usr/hive/lib/hive-accumulo-handler-3.1.2.jar:/usr/hive/lib/hive-beeline-3.1.2.jar:/usr/hive/lib/hive-classification-3.1.2.jar:/usr/hive/lib/hive-cli-3.1.2.jar:/usr/hive/lib/hive-common-3.1.2.jar:/usr/hive/lib/hive-contrib-3.1.2.jar:/usr/hive/lib/hive-druid-handler-3.1.2.jar:/usr/hive/lib/hive-exec-3.1.2.jar:/usr/hive/lib/hive-hbase-handler-3.1.2.jar:/usr/hive/lib/hive-hcatalog-core-3.1.2.jar:/usr/hive/lib/hive-hcatalog-server-extensions-3.1.2.jar:/usr/hive/lib/hive-hplsql-3.1.2.jar:/usr/hive/lib/hive-jdbc-3.1.2.jar:/usr/hive/lib/hive-jdbc-handler-3.1.2.jar:/usr/hive/lib/hive-kryo-registrator-3.1.2.jar:/usr/hive/lib/hive-llap-client-3.1.2.jar:/usr/hive/lib/hive-llap-common-3.1.2-tests.jar:/usr/hive/lib/hive-llap-common-3.1.2.jar:/usr/hive/lib/hive-llap-ext-client-3.1.2.jar:/usr/hive/lib/hive-llap-server-3.1.2.jar:/usr/hive/lib/hive-llap-tez-3.1.2.jar:/usr/hive/lib/hive-metastore-3.1.2.jar:/usr/hive/lib/hive-serde-3.1.2.jar:/usr/hive/lib/hive-service-3.1.2.jar:/usr/hive/lib/hive-service-rpc-3.1.2.jar:/usr/hive/lib/hive-shims-0.23-3.1.2.jar:/usr/hive/lib/hive-shims-3.1.2.jar:/usr/hive/lib/hive-shims-common-3.1.2.jar:/usr/hive/lib/hive-shims-scheduler-3.1.2.jar:/usr/hive/lib/hive-standalone-metastore-3.1.2.jar:/usr/hive/lib/hive-storage-api-2.7.0.jar:/usr/hive/lib/hive-streaming-3.1.2.jar:/usr/hive/lib/hive-testutils-3.1.2.jar:/usr/hive/lib/hive-upgrade-acid-3.1.2.jar:/usr/hive/lib/hive-vector-code-gen-3.1.2.jar:/usr/hive/lib/hk2-api-2.5.0-b32.jar:/usr/hive/lib/hk2-locator-2.5.0-b32.jar:/usr/hive/lib/hk2-utils-2.5.0-b32.jar:/usr/hive/lib/hppc-0.7.2.jar:/usr/hive/lib/htrace-core-3.2.0-incubating.jar:/usr/hive/lib/httpclient-4.5.2.jar:/usr/hive/lib/httpcore-4.4.4.jar:/usr/hive/lib/ivy-2.4.0.jar:/usr/hive/lib/jackson-annotations-2.9.5.jar:/usr/hive/lib/jackson-core-2.9.5.jar:/usr/hive/lib/jackson-core-asl-1.9.13.jar:/usr/hive/lib/jackson-databind-2.9.5.jar:/usr/hive/lib/jackson-dataformat-smile-2.9.5.jar:/usr/hive/lib/jackson-mapper-asl-1.9.13.jar:/usr/hive/lib/jamon-runtime-2.3.1.jar:/usr/hive/lib/janino-2.7.6.jar:/usr/hive/lib/javassist-3.20.0-GA.jar:/usr/hive/lib/javax.annotation-api-1.2.jar:/usr/hive/lib/javax.inject-2.5.0-b32.jar:/usr/hive/lib/javax.jdo-3.2.0-m3.jar:/usr/hive/lib/javax.servlet-api-3.1.0.jar:/usr/hive/lib/javax.servlet.jsp-2.3.2.jar:/usr/hive/lib/javax.servlet.jsp-api-2.3.1.jar:/usr/hive/lib/javax.ws.rs-api-2.0.1.jar:/usr/hive/lib/javolution-5.5.1.jar:/usr/hive/lib/jaxb-api-2.2.11.jar:/usr/hive/lib/jcodings-1.0.18.jar:/usr/hive/lib/jcommander-1.32.jar:/usr/hive/lib/jdo-api-3.0.1.jar:/usr/hive/lib/jersey-client-2.25.1.jar:/usr/hive/lib/jersey-common-2.25.1.jar:/usr/hive/lib/jersey-container-servlet-core-2.25.1.jar:/usr/hive/lib/jersey-guava-2.25.1.jar:/usr/hive/lib/jersey-media-jaxb-2.25.1.jar:/usr/hive/lib/jersey-server-2.25.1.jar:/usr/hive/lib/jettison-1.1.jar:/usr/hive/lib/jetty-annotations-9.3.20.v20170531.jar:/usr/hive/lib/jetty-client-9.3.20.v20170531.jar:/usr/hive/lib/jetty-http-9.3.20.v20170531.jar:/usr/hive/lib/jetty-io-9.3.20.v20170531.jar:/usr/hive/lib/jetty-jaas-9.3.20.v20170531.jar:/usr/hive/lib/jetty-jndi-9.3.20.v20170531.jar:/usr/hive/lib/jetty-plus-9.3.20.v20170531.jar:/usr/hive/lib/jetty-rewrite-9.3.20.v20170531.jar:/usr/hive/lib/jetty-runner-9.3.20.v20170531.jar:/usr/hive/lib/jetty-schemas-3.1.jar:/usr/hive/lib/jetty-security-9.3.20.v20170531.jar:/usr/hive/lib/jetty-server-9.3.20.v20170531.jar:/usr/hive/lib/jetty-servlet-9.3.20.v20170531.jar:/usr/hive/lib/jetty-util-9.3.20.v20170531.jar:/usr/hive/lib/jetty-webapp-9.3.20.v20170531.jar:/usr/hive/lib/jetty-xml-9.3.20.v20170531.jar:/usr/hive/lib/jline-2.12.jar:/usr/hive/lib/joda-time-2.9.9.jar:/usr/hive/lib/joni-2.1.11.jar:/usr/hive/lib/jpam-1.1.jar:/usr/hive/lib/json-1.8.jar:/usr/hive/lib/jsr305-3.0.0.jar:/usr/hive/lib/jta-1.1.jar:/usr/hive/lib/libfb303-0.9.3.jar:/usr/hive/lib/libthrift-0.9.3.jar:/usr/hive/lib/log4j-1.2-api-2.10.0.jar:/usr/hive/lib/log4j-api-2.10.0.jar:/usr/hive/lib/log4j-core-2.10.0.jar:/usr/hive/lib/log4j-slf4j-impl-2.10.0.jar:/usr/hive/lib/log4j-web-2.10.0.jar:/usr/hive/lib/memory-0.9.0.jar:/usr/hive/lib/metrics-core-3.1.0.jar:/usr/hive/lib/metrics-json-3.1.0.jar:/usr/hive/lib/metrics-jvm-3.1.0.jar:/usr/hive/lib/mysql-metadata-storage-0.12.0.jar:/usr/hive/lib/netty-3.10.5.Final.jar:/usr/hive/lib/netty-all-4.1.17.Final.jar:/usr/hive/lib/netty-buffer-4.1.17.Final.jar:/usr/hive/lib/netty-common-4.1.17.Final.jar:/usr/hive/lib/opencsv-2.3.jar:/usr/hive/lib/orc-core-1.5.6.jar:/usr/hive/lib/orc-shims-1.5.6.jar:/usr/hive/lib/org.abego.treelayout.core-1.0.1.jar:/usr/hive/lib/osgi-resource-locator-1.0.1.jar:/usr/hive/lib/paranamer-2.3.jar:/usr/hive/lib/parquet-hadoop-bundle-1.10.0.jar:/usr/hive/lib/php:/usr/hive/lib/postgresql-9.4.1208.jre7.jar:/usr/hive/lib/postgresql-metadata-storage-0.12.0.jar:/usr/hive/lib/protobuf-java-2.5.0.jar:/usr/hive/lib/py:/usr/hive/lib/sketches-core-0.9.0.jar:/usr/hive/lib/snappy-java-1.1.4.jar:/usr/hive/lib/sqlline-1.3.0.jar:/usr/hive/lib/stax-api-1.0.1.jar:/usr/hive/lib/super-csv-2.2.0.jar:/usr/hive/lib/taglibs-standard-impl-1.2.5.jar:/usr/hive/lib/taglibs-standard-spec-1.2.5.jar:/usr/hive/lib/tempus-fugit-1.1.jar:/usr/hive/lib/transaction-api-1.1.jar:/usr/hive/lib/validation-api-1.1.0.Final.jar:/usr/hive/lib/velocity-1.5.jar:/usr/hive/lib/websocket-api-9.3.20.v20170531.jar:/usr/hive/lib/websocket-client-9.3.20.v20170531.jar:/usr/hive/lib/websocket-common-9.3.20.v20170531.jar:/usr/hive/lib/websocket-server-9.3.20.v20170531.jar:/usr/hive/lib/websocket-servlet-9.3.20.v20170531.jar:/usr/hive/lib/zookeeper-3.4.6.jar
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r e97acb3bd8f3befd27418996fa5d4b50bf2e17bf; compiled by 'sunilg' on 2019-01-08T06:08Z
+STARTUP_MSG:   java = 1.8.0_252
+************************************************************/
+2021-06-27 16:07:20,179 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2021-06-27 16:07:20,576 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-06-27 16:07:20,930 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2021-06-27 16:07:21,143 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2021-06-27 16:07:21,143 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: SecondaryNameNode metrics system started
+2021-06-27 16:07:22,006 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edit logging is async:true
+2021-06-27 16:07:22,036 INFO org.apache.hadoop.hdfs.server.common.Storage: Lock on /tmp/hadoop-root/dfs/namesecondary/in_use.lock acquired by nodename 171@master
+2021-06-27 16:07:22,072 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: KeyProvider: null
+2021-06-27 16:07:22,075 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsLock is fair: true
+2021-06-27 16:07:22,078 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2021-06-27 16:07:22,078 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner             = root (auth:SIMPLE)
+2021-06-27 16:07:22,078 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup          = supergroup
+2021-06-27 16:07:22,078 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled = true
+2021-06-27 16:07:22,078 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: HA Enabled: false
+2021-06-27 16:07:22,147 INFO org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2021-06-27 16:07:22,180 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2021-06-27 16:07:22,180 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2021-06-27 16:07:22,186 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2021-06-27 16:07:22,186 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: The block deletion will start around 2021 Jun 27 16:07:22
+2021-06-27 16:07:22,190 INFO org.apache.hadoop.util.GSet: Computing capacity for map BlocksMap
+2021-06-27 16:07:22,190 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2021-06-27 16:07:22,193 INFO org.apache.hadoop.util.GSet: 2.0% max memory 1.7 GB = 35.4 MB
+2021-06-27 16:07:22,193 INFO org.apache.hadoop.util.GSet: capacity      = 2^22 = 4194304 entries
+2021-06-27 16:07:22,238 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Storage policy satisfier is disabled
+2021-06-27 16:07:22,239 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2021-06-27 16:07:22,259 INFO org.apache.hadoop.conf.Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2021-06-27 16:07:22,262 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2021-06-27 16:07:22,262 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2021-06-27 16:07:22,262 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2021-06-27 16:07:22,262 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: defaultReplication         = 2
+2021-06-27 16:07:22,262 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplication             = 512
+2021-06-27 16:07:22,262 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: minReplication             = 1
+2021-06-27 16:07:22,262 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplicationStreams      = 2
+2021-06-27 16:07:22,263 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2021-06-27 16:07:22,263 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: encryptDataTransfer        = false
+2021-06-27 16:07:22,263 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2021-06-27 16:07:22,336 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2021-06-27 16:07:22,336 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2021-06-27 16:07:22,337 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2021-06-27 16:07:22,337 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2021-06-27 16:07:22,360 INFO org.apache.hadoop.util.GSet: Computing capacity for map INodeMap
+2021-06-27 16:07:22,360 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2021-06-27 16:07:22,360 INFO org.apache.hadoop.util.GSet: 1.0% max memory 1.7 GB = 17.7 MB
+2021-06-27 16:07:22,360 INFO org.apache.hadoop.util.GSet: capacity      = 2^21 = 2097152 entries
+2021-06-27 16:07:22,361 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: ACLs enabled? false
+2021-06-27 16:07:22,361 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2021-06-27 16:07:22,361 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: XAttrs enabled? true
+2021-06-27 16:07:22,362 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occurring more than 10 times
+2021-06-27 16:07:22,369 INFO org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2021-06-27 16:07:22,372 INFO org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: SkipList is disabled
+2021-06-27 16:07:22,380 INFO org.apache.hadoop.util.GSet: Computing capacity for map cachedBlocks
+2021-06-27 16:07:22,380 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2021-06-27 16:07:22,380 INFO org.apache.hadoop.util.GSet: 0.25% max memory 1.7 GB = 4.4 MB
+2021-06-27 16:07:22,380 INFO org.apache.hadoop.util.GSet: capacity      = 2^19 = 524288 entries
+2021-06-27 16:07:22,365 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2021-06-27 16:07:22,365 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2021-06-27 16:07:22,365 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2021-06-27 16:07:22,495 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2021-06-27 16:07:22,496 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :1000000 txns
+2021-06-27 16:07:22,506 INFO org.apache.hadoop.hdfs.DFSUtil: Starting Web-server for secondary at: http://0.0.0.0:9868
+2021-06-27 16:07:22,543 INFO org.eclipse.jetty.util.log: Logging initialized @3283ms
+2021-06-27 16:07:22,707 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2021-06-27 16:07:22,713 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.secondary is not defined
+2021-06-27 16:07:22,720 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2021-06-27 16:07:22,723 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context secondary
+2021-06-27 16:07:22,723 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2021-06-27 16:07:22,724 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2021-06-27 16:07:22,762 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 9868
+2021-06-27 16:07:22,764 INFO org.eclipse.jetty.server.Server: jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2021-06-27 16:07:22,810 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@3cc41abc{/logs,file:///usr/hadoop/logs/,AVAILABLE}
+2021-06-27 16:07:22,811 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@61ce23ac{/static,file:///usr/hadoop/share/hadoop/hdfs/webapps/static/,AVAILABLE}
+2021-06-27 16:07:22,941 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@4a891c97{/,file:///usr/hadoop/share/hadoop/hdfs/webapps/secondary/,AVAILABLE}{/secondary}
+2021-06-27 16:07:22,967 INFO org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@73163d48{HTTP/1.1,[http/1.1]}{0.0.0.0:9868}
+2021-06-27 16:07:22,967 INFO org.eclipse.jetty.server.Server: Started @3708ms
+2021-06-27 16:07:22,968 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2021-06-27 16:08:23,114 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:09:23,092 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:10:23,075 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:11:23,053 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:12:23,016 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:13:22,980 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:14:22,945 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:15:22,905 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:16:22,878 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:17:22,839 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:18:22,811 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:19:22,776 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:20:22,739 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:21:22,706 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:22:22,682 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:23:22,661 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:24:22,818 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:25:22,778 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:26:22,740 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:27:22,707 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:28:22,671 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:29:22,635 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:30:22,597 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:31:22,579 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:32:22,544 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:33:22,505 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:34:22,481 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:35:22,445 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:36:22,411 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:37:22,376 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:38:22,342 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:39:22,318 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:40:22,284 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:41:22,269 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:42:22,239 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:43:22,220 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:44:22,194 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:45:22,157 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:46:22,118 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:47:22,115 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:48:22,084 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:49:22,048 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:50:22,014 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:51:21,975 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:52:21,958 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:53:21,958 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-27 16:54:21,940 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint
+java.io.IOException: Inconsistent checkpoint fields.
+LV = -65 namespaceID = 1908059269 cTime = 1624810036643 ; clusterId = CID-480bb69d-7d23-4dd9-a695-5c8a135ea535 ; blockpoolId = BP-953812065-172.28.1.1-1624810036643.
+Expecting respectively: -65; 5612119; 1624799484692; CID-d1bb7e42-fa21-44dc-9776-e88aa770b35c; BP-491787876-172.28.1.1-1624799484692.
+	at org.apache.hadoop.hdfs.server.namenode.CheckpointSignature.validateStorageInfo(CheckpointSignature.java:143)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:360)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode$1.run(SecondaryNameNode.java:325)
+	at org.apache.hadoop.security.SecurityUtil.doAsLoginUserOrFatal(SecurityUtil.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:321)
+	at java.lang.Thread.run(Thread.java:748)

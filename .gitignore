@@ -11,3 +11,8 @@ data/batches/*
 
 # Spark job results
 data/output/
+dfs-master/
+dfs-work1/
+dfs-work2/
+airflow/logs/
+data/dbivp1-1.0-SNAPSHOT-jar-with-dependencies.jar
