@@ -39,6 +39,12 @@ git clone https://github.com/panovvv/bigdata-docker-compose.git
 * You should have more than 90% of free disk space, otherwise
   YARN will deem all nodes unhealthy.
 
+Build airflow Docker:
+```bash
+cd bigdata-docker-compose/airflow
+docker build --rm -t kylg/docker-airflow-spark:latest .
+```
+
 Bring everything up:
 ```bash
 cd bigdata-docker-compose
