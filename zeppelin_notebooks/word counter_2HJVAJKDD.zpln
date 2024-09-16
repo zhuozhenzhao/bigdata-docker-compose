@@ -1,0 +1,45 @@
+{
+  "paragraphs": [
+    {
+      "text": "\nimport org.apache.spark.rdd.RDD\nimport org.apache.spark.sql.SparkSession\n\nobject WordCountExample {\n\n  def main(args:Array[String]): Unit \u003d {\n\n    val spark:SparkSession \u003d SparkSession.builder()\n      .master(\"local[3]\")\n      .appName(\"SparkByExamples.com\")\n      .getOrCreate()\n\n    val sc \u003d spark.sparkContext\n\n    val rdd:RDD[String] \u003d sc.textFile(\"src/main/resources/test.txt\")\n    println(\"initial partition count:\"+rdd.getNumPartitions)\n\n    val reparRdd \u003d rdd.repartition(4)\n    println(\"re-partition count:\"+reparRdd.getNumPartitions)\n\n    //rdd.coalesce(3)\n\n    rdd.collect().foreach(println)\n\n    // rdd flatMap transformation\n    val rdd2 \u003d rdd.flatMap(f\u003d\u003ef.split(\" \"))\n    rdd2.foreach(f\u003d\u003eprintln(f))\n\n    //Create a Tuple by adding 1 to each word\n    val rdd3:RDD[(String,Int)]\u003d rdd2.map(m\u003d\u003e(m,1))\n    rdd3.foreach(println)\n\n    //Filter transformation\n    val rdd4 \u003d rdd3.filter(a\u003d\u003e a._1.startsWith(\"a\"))\n    rdd4.foreach(println)\n\n    //ReduceBy transformation\n    val rdd5 \u003d rdd3.reduceByKey(_ + _)\n    rdd5.foreach(println)\n\n    //Swap word,count and sortByKey transformation\n    val rdd6 \u003d rdd5.map(a\u003d\u003e(a._2,a._1)).sortByKey()\n    println(\"Final Result\")\n\n    //Action - foreach\n    rdd6.foreach(println)\n\n    //Action - count\n    println(\"Count : \"+rdd6.count())\n\n    //Action - first\n    val firstRec \u003d rdd6.first()\n    println(\"First Record : \"+firstRec._1 + \",\"+ firstRec._2)\n\n    //Action - max\n    val datMax \u003d rdd6.max()\n    println(\"Max Record : \"+datMax._1 + \",\"+ datMax._2)\n\n    //Action - reduce\n    val totalWordCount \u003d rdd6.reduce((a,b) \u003d\u003e (a._1+b._1,a._2))\n    println(\"dataReduce Record : \"+totalWordCount._1)\n    //Action - take\n    val data3 \u003d rdd6.take(3)\n    data3.foreach(f\u003d\u003e{\n      println(\"data3 Key:\"+ f._1 +\", Value:\"+f._2)\n    })\n\n    //Action - collect\n    val data \u003d rdd6.collect()\n    data.foreach(f\u003d\u003e{\n      println(\"Key:\"+ f._1 +\", Value:\"+f._2)\n    })\n\n    //Action - saveAsTextFile\n    rdd5.saveAsTextFile(\"c:/tmp/wordCount\")\n    \n  }\n}\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-11-14 20:41:04.586",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1668458452801_1797924490",
+      "id": "paragraph_1668458452801_1797924490",
+      "dateCreated": "2022-11-14 20:40:52.801",
+      "status": "READY"
+    }
+  ],
+  "name": "word counter",
+  "id": "2HJVAJKDD",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
