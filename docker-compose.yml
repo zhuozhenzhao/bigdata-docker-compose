@@ -201,7 +201,7 @@ services:
 
   # airflow LocalExecutor
   airflow_webserver:
-      image: kylg/docker-airflow-spark:latest
+      image: zhuozhenzhao/docker-airflow-spark:latest
       restart: always
       networks:
         spark_net:
