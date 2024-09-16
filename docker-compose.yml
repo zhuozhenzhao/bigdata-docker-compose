@@ -218,6 +218,7 @@ services:
           - ./airflow/dags:/usr/local/airflow/dags #DAG folder
           - ./airflow/logs:/usr/local/airflow/logs
           - ./airflow/config/airflow.cfg:/usr/local/airflow/airflow/airflow.cfg
+          - ./data:/usr/local/airflow/data
       ports:
           - "8282:8282"
       command: webserver
